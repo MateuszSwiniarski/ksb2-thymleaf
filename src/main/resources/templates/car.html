@@ -15,6 +15,12 @@
     <p>--------------------------</p>
 </tr>
 
+<form th:action="@{/add-car}" th:object="${newCar}" method="post">
+    <p>Mark:<input type="text" th:field="*{mark}"></p>
+    <p>Model:<input type="text" th:field="*{model}"></p>
+    <p><input type="submit" value="add new car"></p>
+</form>
+
 
 </body>
 </html>
