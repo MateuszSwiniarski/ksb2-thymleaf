@@ -2,15 +2,25 @@ package com.rodzyn.ksb2thymleaf;
 
 public class Car {
 
+    private int id;
     private String mark;
     private String model;
 
     public Car() {
     }
 
-    public Car(String mark, String model) {
+    public Car(int id, String mark, String model) {
+        this.id = id;
         this.mark = mark;
         this.model = model;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getMark() {
@@ -32,8 +42,10 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" +
-                "mark='" + mark + '\'' +
+                "id=" + id +
+                ", mark='" + mark + '\'' +
                 ", model='" + model + '\'' +
                 '}';
     }
 }
+

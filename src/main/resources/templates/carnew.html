@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Kurs Themeleaf</h1>
+<p>update Car</p>
+
+<form th:action="@{/add-car}" th:object="${newCar}" method="post">
+    <p>Id: <input type="text" th:field="*{id}"></p>
+    <p>Mark:<input type="text" th:field="*{mark}"></p>
+    <p>Model:<input type="text" th:field="*{model}"></p>
+    <p><input type="submit" value="update car"></p>
+</form>
+
+</body>
+</html>
